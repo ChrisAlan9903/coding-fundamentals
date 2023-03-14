@@ -1,0 +1,167 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --color-1:#800800;
+    --color-2:red;
+    --color-3:rgb(230, 99, 167);
+    --color-4:#faedcd;
+}
+body{
+    margin:0 ;
+    padding: 0;
+    background-color: var(--color-4);
+
+}
+
+.nav-bars{
+    max-height: 100px;
+    position:fixed;
+    /* padding: 0 50px ; */
+
+    /* left: 0;
+    right: 0; */
+    top: 0;
+    width: 100%;
+    background-color: pink;
+    
+}
+
+.nav-container{
+    padding: 0 40px;
+    /* max-width: 100%; */
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.nav-icon{
+    height: inherit;
+    width: 100px;
+    /* margin: 20px; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.iconhehe{
+    font-size: 32px; /* Font Awesome icons are fonts. So need to use font size to resize them */
+    color: var(--color-1);
+}
+
+.nav-links{
+    /* margin-left: auto; */
+    display:flex;
+    list-style-type: none;
+    list-style: none;
+    
+}
+
+.nav-links li{
+    margin: 20px 20px;
+    padding: 5px 5px;
+}
+
+
+.nav-links li a{
+    text-decoration: none;
+    color: var(--color-1);
+    
+}
+.nav-links li a:hover{
+    /* font-weight: 700; */
+    color: var(--color-4);
+    text-shadow: 5px 5px 3px var(--color-1);
+    
+}
+
+.section-1{
+    margin-top: 100px;
+    margin-left: 40px;
+    margin-right: 100px;
+    max-height: 100%;
+    padding: 100px;
+    /* position: absolute; */
+    background-color: var(--color-4);
+    line-height: 20px;
+}
+
+.section-1 h1{
+    color: var(--color-1);
+    font-size: 50px;
+    
+}
+.section-1 h2{
+    color: var(--color-3);
+    font-size: 35px;
+    
+}
+.section-1 h5{
+    color: var(--color-2);
+    font-size: 15px;
+    
+}
+.section-1 p{
+    color: var(--color-3);
+    font-size: 15px;
+    
+}
+.section-1 span{
+    color: var(--color-2);
+    font-size: 15px;
+    
+}
+.contact-button{
+    background-color: var(--color-4);
+    border: 2px solid var(--color-3);
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 3px;
+    height: 40px;
+    color: var(--color-1);
+    font-weight: 700;
+
+    cursor: pointer;
+    
+}
+
+.contact-button:hover{
+    background-color: var(--color-3);
+    color: var(--color-4);
+}
+
+/* NavBar sliding part */
+
+@keyframes slideIn {    
+    0% {        
+      transform: translateY(-100%);    
+    }    
+    100% {        
+      transform: translateY(0px);    
+    }
+  }
+  
+  @keyframes slideOut {    
+    0% {        
+      transform: translateY(0px);    
+    }    
+    100% {        
+      transform: translateY(-100%);    
+    }
+  }
+  
+  .slide-in {    
+    animation-duration: 0.7s;    
+    animation-name: slideIn;    
+    animation-fill-mode: forwards;    
+    animation-timing-function: ease-in-out;
+  }
+  
+  .slide-out {    
+    animation-duration: 0.7s;    
+    animation-name: slideOut;    
+    animation-fill-mode: forwards;    
+    animation-timing-function: ease-in-out;
+  }
